@@ -1,6 +1,6 @@
 public class Assignment {
 	public static void FirstWork() {
-	 System.out.println( "Hello group!" ); 
+	 System.out.println( "I feel stupid with all this !" ); 
 	 }
 }
 	  
