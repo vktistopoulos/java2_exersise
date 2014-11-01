@@ -1,5 +1,5 @@
 //The original code without any commit ,is copied from http://stackoverflow.com/questions/238547/how-do-you-programmatically-download-a-webpage-in-java
-
+import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -15,7 +15,12 @@ public static void main(String[] args) {
     String line;
 
     try {
-        url = new URL("http://stackoverflow.com/");
+        Scanner in=new Scanner(System.in);
+        System.out.println("Give the name of the site");
+        //example "http://stackoverflow.com/"
+        String a=in.nextLine();
+        
+        url = new URL(a);
         is = url.openStream();  // throws an IOException
         br = new BufferedReader(new InputStreamReader(is));
 
