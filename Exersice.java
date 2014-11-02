@@ -21,7 +21,7 @@ public static void main(String[] args) {
         String a=in.nextLine();
         
         url = new URL(a);
-        is = url.openStream();  // throws an IOException
+        is = url.openStream();  // throws an IOException here
         br = new BufferedReader(new InputStreamReader(is));
 
         while ((line = br.readLine()) != null) {
