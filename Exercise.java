@@ -1,6 +1,7 @@
 //The original code without any commit ,is copied from http://stackoverflow.com/questions/238547/how-do-you-programmatically-download-a-webpage-in-java
 //This is my contribution
 //This code is written in java
+//
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +19,7 @@ public static void main(String[] args) {
 
     try {
         Scanner in=new Scanner(System.in);
-        System.out.printf("Type the name of the site");
+        System.out.printf("Type the name of the site"); //Now you type the name 
         //example "http://stackoverflow.com/"
         String a=in.nextLine();
         
