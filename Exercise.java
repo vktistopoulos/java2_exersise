@@ -16,7 +16,7 @@ public static void main(String[] args) {
 
     try {
         Scanner in=new Scanner(System.in);
-        System.out.println("Give the name of the site");
+        System.out.printf("Type the name of the site");
         //example "http://stackoverflow.com/"
         String a=in.nextLine();
         
@@ -25,7 +25,7 @@ public static void main(String[] args) {
         br = new BufferedReader(new InputStreamReader(is));
 
         while ((line = br.readLine()) != null) {
-            System.out.println(line);
+            System.out.printf(line);
         }
     } catch (MalformedURLException mue) {
          mue.printStackTrace();
