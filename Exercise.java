@@ -21,7 +21,7 @@ public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
         System.out.printf("Type the name of the site"); //Now you type the name 
         //example "http://stackoverflow.com/"
-        String a=in.nextLine();
+        String answer=in.nextLine();
         
         url = new URL(a);
         is = url.openStream();  // throws an IOException here
