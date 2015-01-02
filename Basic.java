@@ -1,3 +1,3 @@
-public abstract class Basic {
-Basic() {}
+public abstract class Komvos {
+Komvos() {}
 }
