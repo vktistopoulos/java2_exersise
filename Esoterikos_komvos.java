@@ -1,11 +1,11 @@
 public final class Esoterikos_komvos extends Komvos {
-public final  Komvos left;
-public final  Komvos right;
+public final  Komvos leftChild;
+public final  Komvos rightChild;
 
-public Esoterikos_komvos( Komvos left,  Komvos right) {
-if (left == null || right == null)
+public Esoterikos_komvos( Komvos leftChild,  Komvos rightChild) {
+if (leftChild == null || rightChild == null)
 throw new NullPointerException("NullPointerException!!");
-this.left = left;
-this.right = right;
+this.leftChild = leftChild;
+this.rightChild = rightChild;
 }
 }
