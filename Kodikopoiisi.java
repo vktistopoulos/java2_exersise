@@ -1,11 +1,11 @@
 public final class Kodikopoiisi {
-	private BitOutputStream output;
+	private Eksagwgh_bit output;
 	//Prepei na arxikopoiithei prin kalesoume tin write();
 
 	public Kodikos_dentroy kodikos_dentroy;
 	// O kodikos dentroy borei na allaxei afou kathe simvolo kodikopoiithei,arkei i kadikopoisi kai i apokodikopoiisi na exoume ton idio kodiko dentroy tin idia stigmi;
 
-	public Kodikopoiisi(BitOutputStream out) {
+	public Kodikopoiisi(Eksagwgh_bit out) {
 			if (out == null)
 				throw new NullPointerException("Null argument");
 			output = out;
