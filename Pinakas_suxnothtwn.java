@@ -46,16 +46,9 @@ public final class Pinakas_suxnothtwn {
 		frequencies[symbol]++;
 	}
 	
-	// Επιστροφή συμβολοσειράς με όλα τα σύμβολα και τις συχνότητες.
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < frequencies.length; i++)
-			sb.append(String.format("%d\t%d%n", i, frequencies[i]));
-		return sb.toString();
-	}
 
 	// Επιστροφή ενός κώδικα δέντρου για αυτές τις συχνότητες.
-	public CodeTree xtisimoDentrouKwdika() {
+	public  Kodikos_dentroy  xtisimoDentrouKwdika() {
 	
 		Queue<NodeWithFrequency> pqueue = new PriorityQueue<NodeWithFrequency>();
 
@@ -68,7 +61,7 @@ public final class Pinakas_suxnothtwn {
 		// Δημιουργία τουλάχιστον 2 στοιχείων.
 		for (int i = 0; i < frequencies.length && pqueue.size() < 2; i++) {
 			if (i >= frequencies.length || frequencies[i] == 0) {
-				pqueue.add(new NodeWithFrequency(new Leaf(i), i, 0));
+				pqueue.add(new NodeWithFrequency(new Fyllo(i), i, 0));
 			}
 		}
 		if (pqueue.size() < 2) {
@@ -80,25 +73,25 @@ public final class Pinakas_suxnothtwn {
 			NodeWithFrequency nf1 = pqueue.remove();
 			NodeWithFrequency nf2 = pqueue.remove();
 			pqueue.add(new NodeWithFrequency(
-					new InternalNode(nf1.node, nf2.node),
+					new Esotrikos_komvos(nf1.komvos, nf2.komvos),
 					Math.min(nf1.lowestSymbol, nf2.lowestSymbol),
 					nf1.frequency + nf2.frequency));
 		}
 
 		// Επιστροφή του υπολοίπου.
-		return new CodeTree((InternalNode)pqueue.remove().node, frequencies.length);
+		return new Kodikos_dentroy((Esotrikos_komvos)pqueue.remove().komvos, frequencies.length);
 	}
 
 	private static class NodeWithFrequency implements Comparable<NodeWithFrequency> {
 
-		public final Node node;
+		public final Komvos komvos;
 
 		public final int lowestSymbol;
 
 		public final long frequency;
 
-		public NodeWithFrequency(Node node, int lowestSymbol, long freq) {
-			this.node = node;
+		public NodeWithFrequency(Komvos komvos, int lowestSymbol, long freq) {
+			this.komvos = komvos;
 			this.lowestSymbol = lowestSymbol;
 			this.frequency = freq;
 		}
