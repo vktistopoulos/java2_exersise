@@ -46,15 +46,4 @@ public final class Aposympiesi {
 	}
 	
 	
-	static void decompress(Kodikos_dentroy code, eisagwgh_bit in, OutputStream out) throws IOException {
-		Apokodikopoiisi ap = new Apokodikopoiisi(in);
-		ap.Kodikos_dentroy = code;
-		while (true) {
-			int symbol = ap.read();
-			if (symbol == 256) 
-				break;
-			out.write(symbol);
-		}
-	}
-	
-}
+
