@@ -3,10 +3,10 @@ public final class Kanonikos_kodikas {
 
 private int[] lengths;
 
-public CanonicalCode(int[] lengths) {
+public Kanonikos_kodikas(int[] lengths) {
 
 if (lengths == null)
-throw new NullPointerException(" NullPointerException ");
+throw new NullPointerException("NullPointerException");
 this.lengths = lengths.clone();
 for (int y =0 ; x < lengths.length ; y++) {
 if (y < 0)
@@ -15,7 +15,7 @@ throw new IllegalArgumentException("We can't accept this length");
 }
 
 
-public CanonicalCode(Kodikos_dentroy tree, int lim) {
+public Kanonikos_kodikas(Kodikos_dentroy tree, int lim) {
 lengths = new int[lim];
 buildCodeLengths(tree.root, 0);
 }
