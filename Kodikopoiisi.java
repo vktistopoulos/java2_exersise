@@ -11,11 +11,11 @@ public final class Kodikopoiisi {
 			output = out;
 	}
 	public void write(int symbol) throws IOException {
-			if ( Kodikos_dentroy == null)
-				throw new NullPointerException("Null κωδικος");
+		if ( Kodikos_dentroy == null)
+			throw new NullPointerException("Null κωδικος");
 
-			List<Integer> bits = Kodikos_dentroy.getCode(symbol);
-			for (int b : bits)
-				output.write(b);
+		List<Integer> bits = Kodikos_dentroy.getCode(symbol);
+		for (int b : bits)
+			output.write(b);
 	}
 }
