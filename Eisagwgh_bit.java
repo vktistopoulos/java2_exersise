@@ -2,12 +2,8 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 
-
-
-
-public final class eisagwgh_bit {
+public final class Eisagwgh_bit {
       
-     
       private InputStream input;
     
       private int nextBits;
@@ -15,8 +11,6 @@ public final class eisagwgh_bit {
       private int numBitsRemaining;
       private boolean isEndOfStream;
       
-   
-
       public BitInputStream(InputStream in) {
             if (in == null)
                   throw new NullPointerException("Argument is null");
@@ -25,8 +19,6 @@ public final class eisagwgh_bit {
             isEndOfStream = false;
       }
 
-      
-      
       public int read() throws IOException {
             if (isEndOfStream)
                   return -1;
@@ -42,7 +34,6 @@ public final class eisagwgh_bit {
             return (nextBits >>> numBitsRemaining) & 1;
       }
 
-    
       public int readNoEof() throws IOException {
             int result = read();
             if (result != -1)
@@ -51,7 +42,6 @@ public final class eisagwgh_bit {
                   throw new EOFException("End of stream reached");
       }
 
-      
       public void close() throws IOException {
             input.close();
       }
