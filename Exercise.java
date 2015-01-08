@@ -1,4 +1,3 @@
-//The original code without any commit ,is copied from http://stackoverflow.com/questions/238547/how-do-you-programmatically-download-a-webpage-in-java
 //This is my contribution
 //This code is written in java
 //It is the first task for our project
