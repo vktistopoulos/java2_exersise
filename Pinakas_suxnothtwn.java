@@ -46,7 +46,6 @@ public final class Pinakas_suxnothtwn {
 		frequencies[symbol]++;
 	}
 	
-
 	// Επιστροφή ενός κώδικα δέντρου για αυτές τις συχνότητες.
 	public  Kodikos_dentroy  xtisimoDentrouKwdika() {
 	
