@@ -5,7 +5,7 @@ public final class Apokodikopoiisi {
 
 	public Kodikos_dentroy Kodikos_dentroy;
 
-	public Apokodikopoiisi(eisagwgh_bit  in) {
+	public Apokodikopoiisi(eisagwgh_bit in) {
 		if (in == null)
 			throw new NullPointerException("Null argument");
 			input = in;
