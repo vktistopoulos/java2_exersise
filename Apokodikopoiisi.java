@@ -16,6 +16,7 @@ public final class Apokodikopoiisi {
 			throw new NullPointerException("null code");
 
 		Esoterikos_komvos currentKomvos = Kodikos_dentroy.root;
+		
 		while (true) {
 			int temp = input.readNoEof();
 			Komvos nextKomvos ;
