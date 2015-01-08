@@ -20,7 +20,7 @@ public final class Apokodikopoiisi {
 		while (true) {
 			int temp = input.readNoEof();
 			Komvos nextKomvos ;
-			if      (temp == 0) 
+			if (temp == 0) 
 				nextKomvos = currentKomvos.leftChild;
 			else if (temp == 1)
 				nextKomvos = currenKomvos.rightChild;
