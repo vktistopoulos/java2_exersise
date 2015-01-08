@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-
 // Αποσυμπιέζει ένα εισαγώμενο αρχείο ,το οποίο είχε συμπιεστεί με την κωδικοποίηση Χόφμαν, σε ένα εξαγώμενο αρχείο
 public final class Aposympiesi {
 	
@@ -32,7 +31,6 @@ public final class Aposympiesi {
 			in.close();
 		}
 	}
-	
 	
 	static Kanonikos_kodikas readCode(eisagwgh_bit in) throws IOException {
 		int[] lengths = new int[257];
