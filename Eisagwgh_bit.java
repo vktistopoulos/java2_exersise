@@ -13,7 +13,7 @@ public final class Eisagwgh_bit {
       
       public BitInputStream(InputStream in) {
             if (in == null)
-                  throw new NullPointerException("Argument is null");
+                  throw new NullPointerException("Null");
             input = in;
             numBitsRemaining = 0;
             isEndOfStream = false;
@@ -39,7 +39,7 @@ public final class Eisagwgh_bit {
             if (result != -1)
                   return result;
             else
-                  throw new EOFException("End of stream reached");
+                  throw new EOFException("Τέλος της σειράς διαβάσματος");
       }
 
       public void close() throws IOException {
