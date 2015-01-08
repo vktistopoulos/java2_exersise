@@ -1,7 +1,3 @@
-//This is my contribution
-//This code is written in java
-//It is the first task for our project
-//
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
