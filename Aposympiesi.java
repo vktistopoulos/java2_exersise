@@ -42,6 +42,7 @@ public final class Aposympiesi {
 		}
 		return new Kanonikos_kodikas(lengths);
 	}
+	
 	static void decompress(Kodikos_dentroy code, eisagwgh_bit in, OutputStream out) throws IOException {
                  Apokodikopoiisi ap = new Apokodikopoiisi(in);
  		ap.Kodikos_dentroy = code;
@@ -52,7 +53,6 @@ public final class Aposympiesi {
 			out.write(symbol);
 		}
 	}
-
 }
 	
 
