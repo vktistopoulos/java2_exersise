@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
 /*
 *Ένα δυαδικό δέντρο του οποίου κάθε φύλλο κωδικοποιεί ένα σύμβολο για να  αναπαραστήσει τον κώδικα του Χόφμαν.
 *Υπάρχουν 2 κύριες χρήσεις του δέντρου κωδικοποίησης :
@@ -33,11 +32,10 @@ public final class Kodikos_dentroy {
                 public final Εsoterikos_komvos root;  // Όχι μηδέν
                 
                 // Αποθηκεύει τον κωδικό για κάθε σύμβολο ,ή μηδέν αν το σύμβολο δεν έχει κωδικό
-        // Για παράδειγμα, εάν το σύμβολο 5 έχει κωδικό  10001,τότε codes.get(5) είναι η λίστα [1, 0, 0, 0, 1].
+                // Για παράδειγμα, εάν το σύμβολο 5 έχει κωδικό  10001,τότε codes.get(5) είναι η λίστα [1, 0, 0, 0, 1].
                  private List<List<Integer>> codes;
 
-
-        // Κάθε σύμβολο  στο δέντρο πρέπει να είναι μικρότερο από την μεταβλητή 'symbolLimit'.
+                // Κάθε σύμβολο  στο δέντρο πρέπει να είναι μικρότερο από την μεταβλητή 'symbolLimit'.
                 public Kodikos_dentroy(Εsoterikos_komvos root, int symbolLimit) {
                                 if (root == null)
                                                 throw new NullPointerException("Argument is null");
@@ -48,7 +46,6 @@ public final class Kodikos_dentroy {
                                                 codes.add(null);
                                 buildCodeList(root, new ArrayList<Integer>());
                 }
-
 
                 private void buildCodeList(Komvos node, List<Integer> prefix) {
                                 if (node instanceof Εsoterikos_komvos) {
@@ -75,8 +72,6 @@ public final class Kodikos_dentroy {
                                 }
                 }
 
-
-
                 public List<Integer> getCode(int symbol) {
                                 if (symbol < 0)
                                                 throw new IllegalArgumentException("Illegal symbol");
@@ -85,3 +80,4 @@ public final class Kodikos_dentroy {
                                 else
                                                 return codes.get(symbol);
                 }
+}
