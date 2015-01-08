@@ -6,8 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
- 
-// Χρησιμοποιεί κωδικοποίηση Hoffman για να συμπιέσει ενα εισαγόμενο αρχείο σε ένα εξαγώμενο αρχείο
+// Χρησιμοποιεί κωδικοποίηση Hoffman για να συμπιέσει ενα εισαγόμενο αρχείο σε ένα εξαγόμενο αρχείο.
 
 public final class Sympiesi {
 	
@@ -22,16 +21,14 @@ public final class Sympiesi {
 		File inputFile = new File(args[0]);
 		File outputFile = new File(args[1]);
 		
-		
-		//Διάβασε μια φορα το εισαγόμενο αρχείο προκειμένου να υπολογίσεις τις συχνότητες των συμβόλων
+		//Διάβασε μια φορα το εισαγόμενο αρχείο προκειμένου να υπολογίσεις τις συχνότητες των συμβόλων.
 		Pinakas_suxnothtwn freq = getFrequencies(inputFile);
 		freq.increment(256); 
 		Kodikos_dentroy  code = freq.buildKodikos_dentroy ();
 		Kanonikos_kodikas canonCode = new Kanonikos_kodikas(code, 257);
 		code = canonCode.toKodikos_dentroy (); 
 		
-		
-		// Διάβασε ξανά το εισαγόμενο αρχείο,συμπίεσε με την κωδικοποίηση του Χόφμαν και γράψε το εξαγόμενο αρχείο
+		// Διάβασε ξανά το εισαγόμενο αρχείο,συμπίεσε με την κωδικοποίηση του Χόφμαν και γράψε το εξαγόμενο αρχείο.
 		
 		InputStream in = new BufferedInputStream(new FileInputStream(inputFile));
 		Eksagwgh_bit out = new Eksagwgh_bit(new BufferedOutputStream(new FileOutputStream(outputFile)));
@@ -43,7 +40,6 @@ public final class Sympiesi {
 			in.close();
 		}
 	}
-	
 	
 	private static Pinakas_suxnothtwn getFrequencies(File file) throws IOException {
 		Pinakas_suxnothtwn freq = new Pinakas_suxnothtwn(new int[257]);
@@ -60,7 +56,6 @@ public final class Sympiesi {
 		}
 		return freq;
 	}
-	
 	
 	static void writeCode( Eksagwgh_bit out, Kanonikos_kodikas canonCode) throws IOException {
 	
@@ -87,6 +82,5 @@ public final class Sympiesi {
 		}
 		kod.write(256);
 	}
-
 }
 	
