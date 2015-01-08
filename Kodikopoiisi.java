@@ -12,7 +12,7 @@ public final class Kodikopoiisi {
 	}
 	public void write(int symbol) throws IOException {
 		if ( Kodikos_dentroy == null)
-			throw new NullPointerException("Null κωδικος");
+			throw new NullPointerException("Null κωδικός");
 
 		List<Integer> bits = Kodikos_dentroy.getCode(symbol);
 		for (int b : bits)
