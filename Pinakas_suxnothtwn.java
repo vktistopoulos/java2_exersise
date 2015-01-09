@@ -13,7 +13,7 @@ public final class Pinakas_suxnothtwn {
 		}
 		if (freqs.length < 2) {
 			throw new IllegalArgumentException("Τουλάχιστον 2 σύμβολα χρειάζονται");
-			frequencies = freqs.clone();
+			
 		}
 		for (int x : frequencies) {
 			if (x < 0) {
