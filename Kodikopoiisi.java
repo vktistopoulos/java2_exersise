@@ -1,6 +1,7 @@
+
 import java.io.IOException;
-import java.util.List;  
-  
+import java.util.List;
+
      public final class Kodikopoiisi {
 	private Eksagwgh_bit output;
 
