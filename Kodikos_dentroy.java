@@ -47,20 +47,20 @@ public final class Kodikos_dentroy {
                                 buildCodeList(root, new ArrayList<Integer>());
                 }
 
-                private void buildCodeList(Komvos node, List<Integer> prefix) {
-                                if (node instanceof Εsoterikos_komvos) {
-                                               Εsoterikos_komvos esoterikos_komvos = (Εsoterikos_komvos)Komvos;
+                private void buildCodeList(Komvos komvos, List<Integer> prefix) {
+                                if (komvos instanceof Εsoterikos_komvos) {
+                                               Εsoterikos_komvos esoterikos_komvos = (Εsoterikos_komvos)komvos;
 
                                                 prefix.add(0);
-                                                buildCodeList(internalNode.leftChild , prefix);
+                                                buildCodeList( esoterikos_komvos.leftChild , prefix);
                                                 prefix.remove(prefix.size() - 1);
 
                                                 prefix.add(1);
-                                                buildCodeList( Εsoterikos_komvos.rightChild, prefix);
+                                                buildCodeList( esoterikos_komvos.rightChild, prefix);
                                                 prefix.remove(prefix.size() - 1);
 
                                 } else if (Komvos instanceof Fyllo) {
-                                                Fyllo fyllo = (Fyllo)node;
+                                                Fyllo fyllo = (Fyllo)komvos ;
                                                 if (fyllo.symbol >= codes.size())
                                                                 throw new IllegalArgumentException("Symbol violates symbol limit");
                                                 if (codes.get(fyllo.symbol) != null)
