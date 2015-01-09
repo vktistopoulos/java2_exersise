@@ -8,7 +8,7 @@ public final class Eksagwgh_bit {
 	private int currentByte;
 	private int numBitsInCurrentByte;
 	
-	public BitOutputStream(OutputStream out) {
+	public Eksagwgh_bit(OutputStream out) {
 		if (out == null)
 			throw new NullPointerException("Null argument");
 		output = out;
