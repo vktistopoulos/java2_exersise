@@ -29,27 +29,27 @@ import java.util.List;
 
 public final class Kodikos_dentroy {
 
-                public final Εsoterikos_komvos root;  // Όχι μηδέν
-                
+                public final Esoterikos_komvos root;  // Όχι μηδέν
+
                 // Αποθηκεύει τον κωδικό για κάθε σύμβολο ,ή μηδέν αν το σύμβολο δεν έχει κωδικό
                 // Για παράδειγμα, εάν το σύμβολο 5 έχει κωδικό  10001,τότε codes.get(5) είναι η λίστα [1, 0, 0, 0, 1].
                  private List<List<Integer>> codes;
 
                 // Κάθε σύμβολο  στο δέντρο πρέπει να είναι μικρότερο από την μεταβλητή 'symbolLimit'.
-                public Kodikos_dentroy(Εsoterikos_komvos root, int symbolLimit) {
+                public Kodikos_dentroy(Esoterikos_komvos root, int symbolLimit) {
                                 if (root == null)
                                                 throw new NullPointerException("Argument is null");
                                 this.root = root;
 
-                                codes = new ArrayList<List<Integer>>(); 
+                                codes = new ArrayList<List<Integer>>();
                                 for (int i = 0; i < symbolLimit; i++)
                                                 codes.add(null);
                                 buildCodeList(root, new ArrayList<Integer>());
                 }
 
                 private void buildCodeList(Komvos komvos, List<Integer> prefix) {
-                                if (komvos instanceof Εsoterikos_komvos) {
-                                               Εsoterikos_komvos esoterikos_komvos = (Εsoterikos_komvos)komvos;
+                                if (komvos instanceof Esoterikos_komvos) {
+                                               Esoterikos_komvos esoterikos_komvos = (Esoterikos_komvos)komvos;
 
                                                 prefix.add(0);
                                                 buildCodeList( esoterikos_komvos.leftChild , prefix);
@@ -59,7 +59,7 @@ public final class Kodikos_dentroy {
                                                 buildCodeList( esoterikos_komvos.rightChild, prefix);
                                                 prefix.remove(prefix.size() - 1);
 
-                                } else if (Komvos instanceof Fyllo) {
+                                } else if (komvos instanceof Fyllo) {
                                                 Fyllo fyllo = (Fyllo)komvos ;
                                                 if (fyllo.symbol >= codes.size())
                                                                 throw new IllegalArgumentException("Symbol violates symbol limit");
