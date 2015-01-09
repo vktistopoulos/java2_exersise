@@ -24,7 +24,7 @@ public final class Sympiesi {
 		//Διάβασε μια φορα το εισαγόμενο αρχείο προκειμένου να υπολογίσεις τις συχνότητες των συμβόλων.
 		Pinakas_suxnothtwn freq = getFrequencies(inputFile);
 		freq.aukshsh(256);
-		Kodikos_dentroy  code = freq.buildCodeTree ();
+		Kodikos_dentroy  code = freq.xtisimoDentrouKwdika ();
 		Kanonikos_kodikas canonCode = new Kanonikos_kodikas(code, 257);
 		code = canonCode.toCodeTree();
 
@@ -83,5 +83,3 @@ public final class Sympiesi {
 		kod.write(256);
 	}
 }
-
-		
