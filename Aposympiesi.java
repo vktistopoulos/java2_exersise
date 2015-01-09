@@ -24,7 +24,7 @@ public final class Aposympiesi {
 		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 		try {
 			Kanonikos_kodikas canonCode = readCode(in);
-			Kodikos_dentroy code = canonCode.toKodikos_dentroy();
+			Kodikos_dentroy codetree = canonCode.toKodikos_dentroy();
 			decompress(code, in, out);
 		} finally {
 			out.close();
