@@ -22,9 +22,9 @@ public final class Sympiesi {
 		File outputFile = new File(args[1]);
 
 		//Διάβασε μια φορα το εισαγόμενο αρχείο προκειμένου να υπολογίσεις τις συχνότητες των συμβόλων.
-		Pinakas_suxnothtwn frequ = getFrequencies(inputFile);
-		frequ.increment(256);
-		Kodikos_dentroy  code = frequ.buildKodikos_dentroy ();
+		Pinakas_suxnothtwn freq = getFrequencies(inputFile);
+		freq.aukshsh(256);
+		Kodikos_dentroy  code = freq.buildCodeTree ();
 		Kanonikos_kodikas canonCode = new Kanonikos_kodikas(code, 257);
 		code = canonCode.toCodeTree();
 
@@ -42,19 +42,19 @@ public final class Sympiesi {
 	}
 
 	private static Pinakas_suxnothtwn getFrequencies(File file) throws IOException {
-		Pinakas_suxnothtwn frequencies = new Pinakas_suxnothtwn(new int[257]);
+		Pinakas_suxnothtwn freq = new Pinakas_suxnothtwn(new int[257]);
 		InputStream input = new BufferedInputStream(new FileInputStream(file));
 		try {
 			while (true) {
 				int b = input.read();
 				if (b == -1)
 					break;
-				frequ.increment(b);
+				freq.aukshsh(b);
 			}
 		} finally {
 			input.close();
 		}
-		return frequencies;
+		return freq;
 	}
 
 	static void writeCode( Eksagwgh_bit out, Kanonikos_kodikas canonCode) throws IOException {
@@ -83,3 +83,5 @@ public final class Sympiesi {
 		kod.write(256);
 	}
 }
+
+		
