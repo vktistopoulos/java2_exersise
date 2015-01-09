@@ -54,7 +54,7 @@ public final class Pinakas_suxnothtwn {
 		// Άθροισμα των φύλλων για τα σύμβολα με μη μηδενική συχνότητα.
 		for (int i = 0; i < frequencies.length; i++) {
 			if (frequencies[i] > 0)
-				pqueue.add(new NodeWithFrequency(new Leaf(i), i, frequencies[i]));
+				pqueue.add(new NodeWithFrequency(new Fyllo(i), i, frequencies[i]));
 		}
 
 		// Δημιουργία τουλάχιστον 2 στοιχείων.
@@ -72,13 +72,13 @@ public final class Pinakas_suxnothtwn {
 			NodeWithFrequency nf1 = pqueue.remove();
 			NodeWithFrequency nf2 = pqueue.remove();
 			pqueue.add(new NodeWithFrequency(
-					new Esotrikos_komvos(nf1.komvos, nf2.komvos),
+					new Esoterikos_komvos(nf1.komvos, nf2.komvos),
 					Math.min(nf1.lowestSymbol, nf2.lowestSymbol),
 					nf1.frequency + nf2.frequency));
 		}
 
 		// Επιστροφή του υπολοίπου.
-		return new Kodikos_dentroy((Esotrikos_komvos)pqueue.remove().komvos, frequencies.length);
+		return new Kodikos_dentroy((Esoterikos_komvos)pqueue.remove().komvos, frequencies.length);
 	}
 
 	private static class NodeWithFrequency implements Comparable<NodeWithFrequency> {
