@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Kanonikos_kodikas {
-
+	
 	private int[] lengths;
-
+	
 	public Kanonikos_kodikas(int[] lengths) {
 		if (lengths == null)
 			throw new NullPointerException("NullPointerException");
@@ -14,12 +14,10 @@ public final class Kanonikos_kodikas {
 				throw new IllegalArgumentException("We can't accept this length");
 		}
 	}
-
 	public Kanonikos_kodikas(Kodikos_dentroy tree, int symbolLim) {
 		lengths = new int[symbolLim];
 		buildCodeLengths(tree.root, 0);
 	}
-
 	private void buildCodeLengths(Komvos node, int vathos) {
 		if (Komvos instanceof Esoterikos_komvos) {
 			Esoterikos_komvos internalNode = (Esoterikos_komvos)node;
@@ -36,17 +34,15 @@ public final class Kanonikos_kodikas {
 				throw new AssertionError("We cant accept this type");
 		}
 	}
-
 	public int getSymbolLim() {
 		return lengths.length;
 	}
-
 	public int getCodeLength(int symbol) {
 		if (symbol < 0 || symbol >= lengths.length)
 			throw new IllegalArgumentException("Symbol out of range");
 			return  lengths[symbol];
+		
 	}
-
 	public Kodikos_dentroy toKodikos_dentroy() {
 		List<Komvos> nodes = new ArrayList<Komvos>();
 		for (int u = max(lengths); u>= 1; u--) {
@@ -66,7 +62,8 @@ public final class Kanonikos_kodikas {
 			return new Kodikos_dentroy(new Esoterikos_komvos(nodes.get(0), nodes.get(1)), lengths.length);
 		}
 
-		private static int max(int[] array) {
+
+	private static int max(int[] array) {
 			int apotelesma = array[0];
 			for (int x : array) 
 				apotelesma = Math.max(x, result);
