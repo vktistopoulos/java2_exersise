@@ -17,7 +17,7 @@ public final class Apokodikopoiisi {
 			if (kodikos_dentroy  == null)
 				throw new NullPointerException("To code tree einai akiro");
 
-			Esoterikos_komvos currentNode = kodikos_dentroy.root;
+			Esoterikos_komvos currentKomvos = kodikos_dentroy.root;
 			while (true) {
 				int temp = input.readNoEof();
 				Komvos nextKomvos ;
