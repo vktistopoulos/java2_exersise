@@ -20,7 +20,7 @@ public final class Aposympiesi {
 		File inputFile = new File(args[0]);
 		File outputFile = new File(args[1]);
 		
-		eisagwgh_bit in = new eisagwgh_bit(new BufferedInputStream(new FileInputStream(inputFile)));
+		Eisagwgh_bit in = new Eisagwgh_bit(new BufferedInputStream(new FileInputStream(inputFile)));
 		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 		try {
 			Kanonikos_kodikas canonCode = readCode(in);
@@ -43,7 +43,7 @@ public final class Aposympiesi {
 		return new Kanonikos_kodikas(lengths);
 	}
 	
-	static void decompress(Kodikos_dentroy code, eisagwgh_bit in, OutputStream out) throws IOException {
+	static void aposympiesi(Kodikos_dentroy code, Eisagwgh_bit in, OutputStream out) throws IOException {
                  Apokodikopoiisi ap = new Apokodikopoiisi(in);
  		ap.Kodikos_dentroy = code;
 		while (true) {
