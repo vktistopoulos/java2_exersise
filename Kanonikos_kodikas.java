@@ -68,7 +68,7 @@ public final class Kanonikos_kodikas {
 
 		private static int max(int[] array) {
 			int apotelesma = array[0];
-			for (int x : array) {
+			for (int x : array) 
 				apotelesma = Math.max(x, result);
 				return apotelesma;
 			}
