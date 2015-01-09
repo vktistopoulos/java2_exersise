@@ -32,20 +32,20 @@ public final class Aposympiesi {
 		}
 	}
 	
-	static Kanonikos_kodikas readCode(eisagwgh_bit in) throws IOException {
+	static Kanonikos_kodikas readCode(Eisagwgh_bit in) throws IOException {
 		int[] lengths = new int[257];
 		for (int i = 0; i < lengths.length; i++) {
-			int e = 0;
+			int val = 0;
 			for (int j = 0; j < 8; j++) 
-				e = e << 1 | in.readNoEof();
-			lengths[i] = e ;
+				val = val << 1 | in.readNoEof();
+			lengths[i] = val ;
 		}
 		return new Kanonikos_kodikas(lengths);
 	}
 	
-	static void aposympiesi(Kodikos_dentroy code, Eisagwgh_bit in, OutputStream out) throws IOException {
+	static void aposympiesi(Kodikos_dentroy codetree, Eisagwgh_bit in, OutputStream out) throws IOException {
                  Apokodikopoiisi ap = new Apokodikopoiisi(in);
- 		ap.Kodikos_dentroy = code;
+ 		ap.kodikos_dentroy = codetree ;
 		while (true) {
 			int symbol = ap.read();
 			if (symbol == 256)
