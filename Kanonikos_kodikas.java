@@ -22,7 +22,7 @@ public final class Kanonikos_kodikas {
 
 	private void buildCodeLengths(Komvos komvos, int vathos) {
 		if (komvos instanceof Esoterikos_komvos) {
-			Esoterikos_komvos internalNode = (Esoterikos_komvos)komvos ;
+			Esoterikos_komvos esoterikos_komvos = (Esoterikos_komvos)komvos ;
 			buildCodeLengths(esoterikos_komvos.leftChild , vathos + 1);
 			buildCodeLengths(esoterikos_komvos.rightChild, vathos + 1);
 		}else if (komvos instanceof Fyllo) {
@@ -72,4 +72,4 @@ public final class Kanonikos_kodikas {
 				apotelesma = Math.max(x, apotelesma);
 				return apotelesma;
 			}
-		}
+		
