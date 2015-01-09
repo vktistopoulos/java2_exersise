@@ -1,29 +1,30 @@
-public final class Apokodikopoiisi {
+  import java.io.IOException;
 
-	private eisagwgh_bit input;
-	//Prepei na arxikopoiithei prin kalesoume tin read();
+ public final class Apokodikopoiisi {
 
-	public Kodikos_dentroy Kodikos_dentroy;
+	private Eisagwgh_bit input;
 
-	public Apokodikopoiisi(eisagwgh_bit in) {
+	public Kodikos_dentroy kodikos_dentroy;
+
+	public Apokodikopoiisi(Eisagwgh_bit in) {
 		if (in == null)
 			throw new NullPointerException("Null argument");
 			input = in;
 	}
 
 	public int read() throws IOException {
-		if (Kodikos_dentroy == null)
+		if (kodikos_dentroy == null)
 			throw new NullPointerException("null code");
 
-		Esoterikos_komvos currentKomvos = Kodikos_dentroy.root;
-		
+		Esoterikos_komvos currentKomvos = kodikos_dentroy.root;
+
 		while (true) {
 			int temp = input.readNoEof();
 			Komvos nextKomvos ;
-			if (temp == 0) 
+			if (temp == 0)
 				nextKomvos = currentKomvos.leftChild;
 			else if (temp == 1)
-				nextKomvos = currenKomvos.rightChild;
+				nextKomvos = currentKomvos.rightChild;
 			else throw new AssertionError();
 
 			if (nextKomvos instanceof  Fyllo)
@@ -36,3 +37,4 @@ public final class Apokodikopoiisi {
 	}
 
 }
+
