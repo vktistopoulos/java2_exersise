@@ -11,7 +11,7 @@ public final class Eisagwgh_bit {
       private int numBitsRemaining;
       private boolean isEndOfStream;
       
-      public BitInputStream(InputStream in) {
+      public Eisagwgh_bit(InputStream in) {
             if (in == null)
                   throw new NullPointerException("Null");
             input = in;
