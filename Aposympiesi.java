@@ -11,7 +11,7 @@ public final class Aposympiesi {
 
 	public static void main(String[] args) throws IOException {
 		if (args.length == 0) {
-			System.err.println("Usage: java HuffmanDecompress InputFile OutputFile");
+			System.err.println("Usage: java Aposympiesi InputFile OutputFile");
 			System.exit(1);
 			return;
 		}
